@@ -5,9 +5,9 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   cacheDir: '../node_modules/.vite/admin-panel',
-
+  
   server: {
-    port: 4200,
+    port: process.env.PORT ? +process.env.PORT : 4200,
     host: 'localhost',
   },
 
